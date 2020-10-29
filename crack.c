@@ -7,28 +7,20 @@
 const int PASS_LEN=20;        // Maximum any password will be
 const int HASH_LEN=33;        // Length of MD5 hash strings
 
-// Given a hash and a plaintext guess, return 1 if
-// the hash of the guess matches the given hash.
-// That is, return 1 if the guess is correct.
-int tryguess(char *hash, char *guess)
+// Given a target hash, crack it. Return the matching
+// password.
+char * crackHash(char *target, char *dictionary)
 {
-    // Hash the guess using MD5
+    // Open the dictionary file
 
-    // Compare the two hashes
+    // Loop through the dictionary file, one line
+    // at a time.
 
-    // Free any malloc'd memory
+    // Hash each password. Compare to the target hash.
+    // If they match, return the corresponding password.
+    
+    // Free up memory?
 
-    return 0;
-}
-
-// Read in the dictionary file and return the array of strings
-// and store the length of the array in size.
-// This function is responsible for opening the dictionary file,
-// reading from it, building the data structure, and closing the
-// file.
-char **read_dictionary(char *filename, int *size)
-{
-    *size = 0;
     return NULL;
 }
 
@@ -41,14 +33,15 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    // Read the dictionary file into an array of strings.
-    int dlen;
-    char **dict = read_dictionary(NULL, NULL);
-
     // Open the hash file for reading.
     
 
-    // For each hash, try every entry in the dictionary.
-    // Print the matching dictionary entry.
-    // Need two nested loops.
+    // For each hash, crack it by passing it to crackHash
+    
+    // Display the hash along with the cracked password:
+    //   5d41402abc4b2a76b9719d911017c592 hello
+    
+    // Close the hash file
+    
+    // Free up any malloc'd memory?
 }
