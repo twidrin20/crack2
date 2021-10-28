@@ -4,12 +4,12 @@
 
 #include "md5.h"
 
-const int PASS_LEN=20;        // Maximum any password will be
-const int HASH_LEN=33;        // Length of MD5 hash strings
+const int PASS_LEN = 20;        // Maximum any password will be
+const int HASH_LEN = 33;        // Length of MD5 hash strings
 
 // Given a target hash, crack it. Return the matching
 // password.
-char * crackHash(char *target, char *dictionary)
+char * crackHash(char * targetHash, char * dictionaryFilename)
 {
     // Open the dictionary file
 
@@ -19,7 +19,7 @@ char * crackHash(char *target, char *dictionary)
     // Hash each password. Compare to the target hash.
     // If they match, return the corresponding password.
     
-    // Free up memory?
+    // Close the dictionary file. Free up memory?
 
     return NULL;
 }
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 {
     if (argc < 3) 
     {
-        printf("Usage: %s hash_file dict_file\n", argv[0]);
+        fprintf(stderr, "Usage: %s hash_file dict_file\n", argv[0]);
         exit(1);
     }
 
