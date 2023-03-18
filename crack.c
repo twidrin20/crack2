@@ -7,20 +7,27 @@
 const int PASS_LEN = 20;        // Maximum any password will be
 const int HASH_LEN = 33;        // Length of MD5 hash strings
 
-// Given a target hash, crack it. Return the matching
-// password.
-char * crackHash(char * targetHash, char * dictionaryFilename)
+// Given a target plaintext word, use it to try to find
+// a matching hash in the hashFile.
+char * useWord(char * plaintext, char * hashFilename)
 {
-    // Open the dictionary file
+    // Hash the plaintext
 
-    // Loop through the dictionary file, one line
-    // at a time.
+    // Open the hash file
 
-    // Hash each password. Compare to the target hash.
-    // If they match, return the corresponding password.
-    
-    // Close the dictionary file. Free up memory?
+    // Loop through the hash file, one line at a time.
 
+    // Attempt to match the hash from the file to the
+    // hash of the plaintext.
+
+    // If there is a match, you'll return the hash.
+
+    // Before returning, do any needed cleanup:
+    //   Close files?
+    //   Free memory?
+
+    // Change this next line to return the hash
+    // that was found.
     return NULL;
 }
 
@@ -33,15 +40,16 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    // Open the hash file for reading.
+    // Open the dictionary file for reading.
     
 
-    // For each hash, crack it by passing it to crackHash
+    // For each dictionary word, pass it to useWord, which
+    // will attempt to match it against the hashes in the hash_file.
     
-    // Display the hash along with the cracked password:
+    // If we got a match, display the hash and the word:
     //   5d41402abc4b2a76b9719d911017c592 hello
     
-    // Close the hash file
+    // Close the dictionary file.
     
     // Free up any malloc'd memory?
 }
