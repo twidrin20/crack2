@@ -21,13 +21,14 @@ char * tryWord(char * plaintext, char * hashFilename)
     // hash of the plaintext.
 
     // If there is a match, you'll return the hash.
+    // If not, return NULL.
 
     // Before returning, do any needed cleanup:
     //   Close files?
     //   Free memory?
 
     // Change this next line to return the hash
-    // that was found.
+    // that was found, or NULL if not found.
     return NULL;
 }
 
@@ -50,6 +51,8 @@ int main(int argc, char *argv[])
     //   5d41402abc4b2a76b9719d911017c592 hello
     
     // Close the dictionary file.
+
+    // Display the number of hashes that were cracked.
     
     // Free up any malloc'd memory?
 }
