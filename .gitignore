@@ -2,3 +2,5 @@ a.out
 crack
 *.o
 hashpass
+core
+vgcore.*
