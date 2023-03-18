@@ -9,7 +9,7 @@ const int HASH_LEN = 33;        // Length of MD5 hash strings
 
 // Given a target plaintext word, use it to try to find
 // a matching hash in the hashFile.
-char * useWord(char * plaintext, char * hashFilename)
+char * tryWord(char * plaintext, char * hashFilename)
 {
     // Hash the plaintext
 
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
     // Open the dictionary file for reading.
     
 
-    // For each dictionary word, pass it to useWord, which
+    // For each dictionary word, pass it to tryWord, which
     // will attempt to match it against the hashes in the hash_file.
     
     // If we got a match, display the hash and the word:
